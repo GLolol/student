@@ -92,7 +92,7 @@ class SingleServerIRCBot(SimpleIRCClient):
         if len(self.server_list[0]) > 2:
             password = self.server_list[0][2]
         try:
-            print("Connecting to %s:%d" % self.server_list[0])
+            print("Connecting to %s:%d" % self.server_list[0][:2])
             self.connect(self.server_list[0][0],
                          self.server_list[0][1],
                          self._nickname,
